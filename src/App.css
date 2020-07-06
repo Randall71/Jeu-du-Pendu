@@ -1,7 +1,27 @@
+
+
+.wordsContainer {
+  /* padding: 100px ; */
+  text-align: center;
+  /* margin: 100vh 100vh;
+  wi */
+  /* width: 600px; */
+}
+
+.word{
+  font-size: 3em;
+  font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(27, 122, 122);
+}
+
 .lettersContainer{
   width: 600px;
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* align-items: center;   */
+  /* justify-content: center;  */
   margin: 200px auto;
   /* background-color: blue; */
 }
