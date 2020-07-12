@@ -1,14 +1,24 @@
-
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .wordsContainer {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
   /* padding: 100px ; */
-  text-align: center;
+  /* text-align: center; */
   /* margin: 100vh 100vh;
   wi */
   /* width: 600px; */
 }
 
 .word{
+  /* flex: 1; */
   font-size: 3em;
   font-weight: 700;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -17,12 +27,17 @@
 
 .lettersContainer{
   width: 600px;
+  margin-top: 70px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  /* width: 600px; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   /* flex-direction: row; */
   /* align-items: center;   */
   /* justify-content: center;  */
-  margin: 200px auto;
+  /* margin: 200px auto; */
   /* background-color: blue; */
 }
 
@@ -32,11 +47,10 @@
   height: 30px;
   padding: 5px;
   background-color: rgb(247, 117, 30);
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   text-align: center;
   color: azure;
-
 }

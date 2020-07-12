@@ -9,7 +9,7 @@ class App extends React.Component{
     super(props)
     this.state = {
       word: [],
-      renderWord:  ['a','b']
+      renderWord:  []
     }
 
     this.entierAleatoire = this.entierAleatoire.bind(this)
@@ -30,7 +30,7 @@ class App extends React.Component{
     
     this.setState((state, props) => ({
        word: wordChoosen,
-       renderWord: Array(wordsTab[index].length).fill('_ ', 0, wordsTab[index].length)
+       renderWord:new Array(wordsTab[index].length).fill('_ ', 0, wordsTab[index].length)
       }))
   }
 
@@ -39,6 +39,18 @@ class App extends React.Component{
   }
 
   checkLettersInWord(letterClick){
+    const {word, renderWord} = this.state 
+    var newRenderWord = [...renderWord] 
+    word.forEach((letter, index) => {
+      // letter === letterClick ? newRenderWord[index] = letter : null 
+      if(letter === letterClick){
+        newRenderWord[index] = letter
+      }
+    } )
+    this.setState({renderWord: newRenderWord})
+    console.table(newRenderWord)    
+    
+    
     // const {word} = this.state
     // const express = '_ '
     // const newRenderWord = word.map((letter) =>{
@@ -54,10 +66,9 @@ class App extends React.Component{
   }
 
   render(){
-    console.log(this.state.word[2])
-    console.log(this.state.word)
-
+   
     const {renderWord} = this.state
+    console.log(this.state.word)
     return(
      <div className="container">
         <div className="wordsContainer">
